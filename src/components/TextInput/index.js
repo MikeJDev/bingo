@@ -20,7 +20,7 @@ export default class TextInput extends React.Component {
           </InputGroup.Append>
         </InputGroup>
             </div>
-
+        
 
       </div>
     )
