@@ -9,11 +9,10 @@ export default class TextInput extends React.Component {
     return (
       <div className='add-item-container'>
         <div>
-
         <InputGroup bsStyle="tabs" className='add-item'>
           <FormControl
             placeholder="Add item"
-            aria-label="Recipient's username"
+            aria-label="user input"
             aria-describedby="basic-addon2"
             />
           <InputGroup.Append>
