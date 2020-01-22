@@ -7,11 +7,11 @@ import TextInput from './components/TextInput'
 function App() {
   return (
     <div className="App">
-      <div className='board'>
-        <Board></Board>
-      </div>
       <div className='textInput'>
         <TextInput></TextInput>
+      </div>
+      <div className='board'>
+        <Board></Board>
       </div>
     </div>
   );
