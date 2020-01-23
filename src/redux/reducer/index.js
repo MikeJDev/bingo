@@ -11,7 +11,7 @@ function rootReducer(state = initialState, action) {
     case ADD_ITEM: 
     return Object.assign({}, state, {
       ...state,
-      items: action.payload
+      items: state.items.concat(action.payload)
     })
       
     default:
