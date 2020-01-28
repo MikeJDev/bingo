@@ -23,7 +23,7 @@ class TextInput extends React.Component {
     }
   }
 
-  handleAddItem = () => {
+  handleAddItem = (e) => {
     if (this.state.itemToBeAdded !== null) {
       this.props.addItem(this.state.itemToBeAdded)
     }
@@ -46,7 +46,7 @@ class TextInput extends React.Component {
               onChange={this.handleChange}
             />
             <InputGroup.Append>
-              <Button variant="outline-secondary" onClick={this.handleAddItem}>+</Button>
+              <Button variant="outline-secondary" type='submit' onClick={this.handleAddItem}>+</Button>
             </InputGroup.Append>
           </InputGroup>
           <ItemList></ItemList>

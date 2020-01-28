@@ -4,45 +4,47 @@ export default class Board extends React.Component {
 
 
 
-  render () {
+  render() {
     return (
       <div>
         <table>
-          <tr>
-            <td>box</td>
-            <td>box</td>
-            <td>box</td>
-            <td>box</td>
-            <td>box</td>
-          </tr>
-          <tr>
-            <td>box</td>
-            <td>box</td>
-            <td>box</td>
-            <td>box</td>
-            <td>box</td>
-          </tr>
-          <tr>
-            <td>box</td>
-            <td>box</td>
-            <td>box</td>
-            <td>box</td>
-            <td>box</td>
-          </tr>
-          <tr>
-            <td>box</td>
-            <td>box</td>
-            <td>box</td>
-            <td>box</td>
-            <td>box</td>
-          </tr>
-          <tr>
-            <td>box</td>
-            <td>box</td>
-            <td>box</td>
-            <td>box</td>
-            <td>box</td>
-          </tr>
+          <tbody>
+            <tr>
+              <td>box</td>
+              <td>box</td>
+              <td>box</td>
+              <td>box</td>
+              <td>box</td>
+            </tr>
+            <tr>
+              <td>box</td>
+              <td>box</td>
+              <td>box</td>
+              <td>box</td>
+              <td>box</td>
+            </tr>
+            <tr>
+              <td>box</td>
+              <td>box</td>
+              <td>box</td>
+              <td>box</td>
+              <td>box</td>
+            </tr>
+            <tr>
+              <td>box</td>
+              <td>box</td>
+              <td>box</td>
+              <td>box</td>
+              <td>box</td>
+            </tr>
+            <tr>
+              <td>box</td>
+              <td>box</td>
+              <td>box</td>
+              <td>box</td>
+              <td>box</td>
+            </tr>
+          </tbody>
         </table>
       </div>
     )

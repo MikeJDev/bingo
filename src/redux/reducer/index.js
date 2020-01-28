@@ -1,6 +1,7 @@
 import {
   ADD_ITEM,
-  } from '../action-types/index'
+  REMOVE_ITEM
+} from '../action-types/index'
 
 const initialState = {
   items: []
@@ -8,15 +9,24 @@ const initialState = {
 
 function rootReducer(state = initialState, action) {
   switch (action.type) {
-    case ADD_ITEM: 
-    return Object.assign({}, state, {
-      ...state,
-      items: state.items.concat(action.payload)
-    })
-      
+    case ADD_ITEM:
+
+      let addItemsNewArray = [...state.items]
+      addItemsNewArray.push(action.payload)
+      return Object.assign({}, state, {
+        ...state,
+        items: addItemsNewArray
+      })
+
+    case REMOVE_ITEM:
+      return Object.assign({}, state, {
+        ...state,
+        items: state.items
+      })
+
     default:
       return state
-    }
+  }
 }
 
 
