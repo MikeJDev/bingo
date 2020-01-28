@@ -2,11 +2,21 @@
   margin-top: px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
   margin-bottom: 100px;
 }
 
 .textInput {
   margin: 50px;
+}
+
+.counter {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.board {
+  display: flex;
+  align-self: center;
 }

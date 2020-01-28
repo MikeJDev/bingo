@@ -19,9 +19,13 @@ function rootReducer(state = initialState, action) {
       })
 
     case REMOVE_ITEM:
+      console.log(action.payload)
+      let removeArray = [...state.items]
+      removeArray.splice(action.payload, 1)
+
       return Object.assign({}, state, {
         ...state,
-        items: state.items
+        items: removeArray
       })
 
     default:
