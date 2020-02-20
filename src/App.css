@@ -1,7 +1,8 @@
 .App {
   margin-top: px;
   display: flex;
-  flex-direction: column;
+  margin-top: 30px;
+  /* flex-direction: column; */
   /* align-items: center; */
   /* justify-content: center; */
   margin-bottom: 100px;
@@ -19,4 +20,8 @@
 .board {
   display: flex;
   align-self: center;
+}
+
+.build-button {
+  margin-top: 10px;
 }

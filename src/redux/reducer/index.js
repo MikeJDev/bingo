@@ -1,10 +1,12 @@
 import {
   ADD_ITEM,
-  REMOVE_ITEM
+  REMOVE_ITEM,
+  RANDOMIZE_ARRAY
 } from '../action-types/index'
 
 const initialState = {
-  items: []
+  items: [],
+  displayArray: []
 }
 
 function rootReducer(state = initialState, action) {
@@ -12,20 +14,39 @@ function rootReducer(state = initialState, action) {
     case ADD_ITEM:
 
       let addItemsNewArray = [...state.items]
-      addItemsNewArray.push(action.payload)
+      if (addItemsNewArray.length <= 24) {
+        addItemsNewArray.push(action.payload)
+      }
       return Object.assign({}, state, {
         ...state,
         items: addItemsNewArray
       })
 
     case REMOVE_ITEM:
-      console.log(action.payload)
       let removeArray = [...state.items]
       removeArray.splice(action.payload, 1)
 
       return Object.assign({}, state, {
         ...state,
         items: removeArray
+      })
+
+    case RANDOMIZE_ARRAY:
+      console.log('hellwefdwefwef')
+      function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array
+      }
+
+      let randomArray = [...state.items]
+      shuffleArray(randomArray)
+
+      return Object.assign({}, state, {
+        ...state,
+        items: randomArray
       })
 
     default:
