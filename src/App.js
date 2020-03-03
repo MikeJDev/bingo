@@ -2,12 +2,9 @@ import React from 'react';
 import './App.css';
 import Board from './components/Board'
 import TextInput from './components/TextInput'
-// import Counter from './components/Counter/index'
-import Button from 'react-bootstrap/Button';
 import { connect } from 'react-redux'
-import {
-  randomizeArray
-} from './redux/actions/index'
+import { randomizeArray } from './redux/actions/index'
+import RandomButton from './components/RandomButton/index'
 
 
 const mapStateToProps = state => ({
@@ -20,22 +17,19 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-
-
 function App() {
   const handleRandom = () => {
-    console.log('hello')
     randomizeArray()
   }
   return (
     <div className="App">
       <div className='textInput'>
         <TextInput></TextInput>
-        <Button className='build-button' onClick={handleRandom}>Randomize Board</Button>
+        <RandomButton 
+          handleRandom={handleRandom}
+        ></RandomButton>
+
       </div>
-      {/* <div className='counter'>
-        <Counter></Counter>
-      </div> */}
       <div className='board'>
         <Board></Board>
       </div>
