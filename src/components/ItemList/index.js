@@ -24,10 +24,12 @@ class ItemList extends React.Component {
   }
 
   render() {
-
+    
+    let colors = ['#BFFCC6', '#C5A3FF', '#ACE7FF', '#FFABAB', '#FFFFD1']
     const items = this.props.addedItems.map((bingoItem, y) => {
+      let randomColor = colors[Math.floor(Math.random() * colors.length)]
       return (
-        <div className='list-item' key={y} id={y}>
+        <div className='list-item' style={{backgroundColor: randomColor}} key={y} id={y}>
           <label>
             {bingoItem}
           </label>
