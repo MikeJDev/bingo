@@ -3,32 +3,14 @@ import './App.css';
 import Board from './components/Board'
 import TextInput from './components/TextInput'
 import { connect } from 'react-redux'
-import { randomizeArray } from './redux/actions/index'
-import RandomButton from './components/RandomButton/index'
-
-
-const mapStateToProps = state => ({
-  addedItems: state.displayArray
-})
-
-function mapDispatchToProps(dispatch) {
-  return {
-    randomizeArray: dispatch(randomizeArray()),
-  };
-}
+import RandomButtonContainer from './components/RandomButtonContainer/index'
 
 function App() {
-  const handleRandom = () => {
-    randomizeArray()
-  }
   return (
     <div className="App">
       <div className='textInput'>
         <TextInput></TextInput>
-        <RandomButton 
-          handleRandom={handleRandom}
-        ></RandomButton>
-
+        <RandomButtonContainer></RandomButtonContainer>
       </div>
       <div className='board'>
         <Board></Board>
@@ -36,9 +18,5 @@ function App() {
     </div>
   );
 }
-const AppConnected = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App);
 
-export default AppConnected;
+export default App;

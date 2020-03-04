@@ -3,5 +3,7 @@ td {
   height: 10vw;
   width: 10vw;
   text-align: center;
+  word-wrap: break-word;
+  padding: 12px;
 }
 
