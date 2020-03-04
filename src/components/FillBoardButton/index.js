@@ -3,10 +3,12 @@ import Button from 'react-bootstrap/Button';
 import '../FillBoardButton/index.css'
 
 
-function FillBoardButton() {
+function FillBoardButton({
+  fillBoard
+}) {
   return (
     <div>
-      <Button className='fill-button' variant="danger">Fill Board</Button>
+      <Button className='fill-button' variant="danger" onClick={fillBoard}>Fill Board</Button>
     </div>
   )
 }

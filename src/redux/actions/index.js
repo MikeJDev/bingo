@@ -2,7 +2,8 @@ import {
   ADD_ITEM,
   REMOVE_ITEM,
   RANDOMIZE_ARRAY,
-  FILL_BOARD
+  FILL_BOARD,
+  CLEAR_BOARD
 } from '../action-types/index'
 
 export function addItem(payload) {
@@ -19,4 +20,8 @@ export function randomizeArray(payload) {
 
 export function fillBoard(payload) {
   return { type: FILL_BOARD, payload }
+}
+
+export function clearBoard(payload) {
+  return { type: CLEAR_BOARD, payload }
 }

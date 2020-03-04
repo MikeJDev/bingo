@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import RandomButton from '../RandomButton/index'
-import { randomizeArray } from '../../redux/actions/index'
+import { randomizeArray, fillBoard, clearBoard } from '../../redux/actions/index'
 import FillBoardButton from "../FillBoardButton/index";
+import ClearBoardButton from '../ClearBoardButton/index'
 import '../ButtonsContainer/index.css'
 
 
@@ -17,7 +18,12 @@ handleRandom = () => {
         <RandomButton
           handleRandom={this.handleRandom}
         ></RandomButton>
-        <FillBoardButton></FillBoardButton>
+        <FillBoardButton
+          fillBoard={this.props.fillBoard}
+        ></FillBoardButton>
+        <ClearBoardButton
+        clearBoard={this.props.clearBoard}
+        ></ClearBoardButton>
       </div>
     )
   }
@@ -28,7 +34,9 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = {
-  randomizeArray
+  randomizeArray,
+  fillBoard,
+  clearBoard
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ButtonsContainer)

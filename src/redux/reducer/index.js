@@ -1,13 +1,17 @@
 import {
   ADD_ITEM,
   REMOVE_ITEM,
-  RANDOMIZE_ARRAY
+  RANDOMIZE_ARRAY,
+  FILL_BOARD,
+  CLEAR_BOARD
 } from '../action-types/index'
+import data from '../../data/index'
 
 const initialState = {
-  items: ['American flag', 'city skyline', 'barn', 'national park sign', 'cow', 'state line', 'mountain', 'tree', 'RR crossing', 'bridge', 
-    'camper', 'wild flowers', 'time zone line', 'lake', 'motorcycle', 'rest area', 'police car', 'historic highway', 'windmill', 'boat',
-    'horse', 'bus', 'bird', 'traffic cone', 'appliance'
+  items: [
+    // 'American flag', 'city skyline', 'barn', 'national park sign', 'cow', 'state line', 'mountain', 'tree', 'RR crossing', 'bridge', 
+    // 'camper', 'wild flowers', 'time zone line', 'lake', 'motorcycle', 'rest area', 'police car', 'historic highway', 'windmill', 'boat',
+    // 'horse', 'bus', 'bird', 'traffic cone', 'appliance'
 ],
   // displayArray: ['hi']
 }
@@ -42,15 +46,32 @@ function rootReducer(state = initialState, action) {
         }
         return array
       }
-
       let randomArray = [...state.items]
       shuffleArray(randomArray)
-
       return Object.assign({}, state, {
         ...state,
         items: randomArray
       })
 
+    case FILL_BOARD:
+      let fillBoardArray = [...state.items]
+      let n = 25 - fillBoardArray.length
+      const shuffled = data.sort(() => 0.5 - Math.random());
+      let selected = shuffled.slice(0, n);
+      for (let i = 0; i < selected.length; i++) {
+        fillBoardArray.push(selected[i])
+      }
+
+      return Object.assign({}, state, {
+        ...state,
+        items: fillBoardArray
+      })
+
+    case CLEAR_BOARD:
+      return Object.assign({}, state, {
+        ...state,
+        items: []
+      })
     default:
       return state
   }
