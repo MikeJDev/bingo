@@ -28,7 +28,7 @@ function ClearBoardButton({
         <Modal.Header closeButton>
           <Modal.Title>Are you sure?</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Clicking YES will remove all items form the board</Modal.Body>
+        <Modal.Body>Clicking YES will remove all items from the board</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             No

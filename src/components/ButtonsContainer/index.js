@@ -18,6 +18,7 @@ handleRandom = () => {
       <div className='buttonsContainer'>
         <RandomButton
           handleRandom={this.handleRandom}
+          items={this.props.items}
         ></RandomButton>
         <FillBoardButton
           fillBoard={this.props.fillBoard}
