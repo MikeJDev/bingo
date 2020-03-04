@@ -2,17 +2,17 @@ import React from 'react';
 import './App.css';
 import Board from './components/Board'
 import TextInput from './components/TextInput'
-import RandomButtonContainer from './components/RandomButtonContainer/index'
+import ButtonsContainer from './components/ButtonsContainer/index'
 
 function App() {
   return (
     <div className="App">
       <div className='board'>
         <Board></Board>
+        <ButtonsContainer></ButtonsContainer>
       </div>
       <div className='textInput'>
         <TextInput></TextInput>
-        <RandomButtonContainer></RandomButtonContainer>
       </div>
     </div>
   );

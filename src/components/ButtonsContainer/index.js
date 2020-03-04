@@ -2,19 +2,22 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import RandomButton from '../RandomButton/index'
 import { randomizeArray } from '../../redux/actions/index'
+import FillBoardButton from "../FillBoardButton/index";
+import '../ButtonsContainer/index.css'
 
 
-export class RandomButtonContainer extends Component {
+export class ButtonsContainer extends Component {
 handleRandom = () => {
   this.props.randomizeArray()
 }
 
   render() {
     return (
-      <div>
+      <div className='buttonsContainer'>
         <RandomButton
           handleRandom={this.handleRandom}
         ></RandomButton>
+        <FillBoardButton></FillBoardButton>
       </div>
     )
   }
@@ -28,4 +31,4 @@ const mapDispatchToProps = {
   randomizeArray
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(RandomButtonContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(ButtonsContainer)

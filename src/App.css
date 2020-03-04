@@ -1,15 +1,15 @@
 .App {
   display: flex;
-  margin-top: 30px;
-  margin-bottom: 100px;
+  margin-top: 10px;
 }
 
 .textInput {
-  margin: 50px;
+  margin: 10px;
 }
 
 .board {
   display: flex;
+  flex-direction: column;
   align-self: center;
   margin: 5px;
 }

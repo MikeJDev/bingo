@@ -1,7 +1,8 @@
 import {
   ADD_ITEM,
   REMOVE_ITEM,
-  RANDOMIZE_ARRAY
+  RANDOMIZE_ARRAY,
+  FILL_BOARD
 } from '../action-types/index'
 
 export function addItem(payload) {
@@ -14,4 +15,8 @@ export function removeItem(payload) {
 
 export function randomizeArray(payload) {
   return { type: RANDOMIZE_ARRAY, payload }
+}
+
+export function fillBoard(payload) {
+  return { type: FILL_BOARD, payload }
 }
