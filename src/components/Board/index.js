@@ -10,14 +10,19 @@ const mapStateToProps = state => ({
 
 class Board extends React.Component {
 
+  handleClick = (e) => {
+    console.log(e)
+  }
+
 
   render() {
+    let color = 'white'
     return (
       <div>
         <table>
           <tbody>
             <tr>
-              <td>{this.props.addedItems[0]}</td>
+              <td id='1' onClick={this.handleClick} style={{backgroundColor: color}}>{this.props.addedItems[0]}</td>
               <td>{this.props.addedItems[1]}</td>
               <td>{this.props.addedItems[2]}</td>
               <td>{this.props.addedItems[3]}</td>
@@ -33,7 +38,7 @@ class Board extends React.Component {
             <tr>
               <td>{this.props.addedItems[10]}</td>
               <td>{this.props.addedItems[11]}</td>
-              <td>FREE SPACE</td>
+              <td className='freeSpace'>FREE SPACE</td>
               <td>{this.props.addedItems[13]}</td>
               <td>{this.props.addedItems[14]}</td>
             </tr>

@@ -8,7 +8,7 @@ function RandomButton({
 }) {
   return (
     <div>
-      <Button className='build-button'  onClick={handleRandom}>Randomize</Button>
+      <Button className='build-button' variant="primary" onClick={handleRandom}>Randomize</Button>
     </div>
   )
 }

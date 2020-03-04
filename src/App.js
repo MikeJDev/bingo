@@ -6,13 +6,15 @@ import ButtonsContainer from './components/ButtonsContainer/index'
 
 function App() {
   return (
-    <div className="App">
-      <div className='board'>
-        <Board></Board>
-        <ButtonsContainer></ButtonsContainer>
-      </div>
-      <div className='textInput'>
-        <TextInput></TextInput>
+    <div className='AppContainer'>
+      <div className="App">
+        <div className='board'>
+          <Board></Board>
+          <ButtonsContainer></ButtonsContainer>
+        </div>
+        <div className='textInput'>
+          <TextInput></TextInput>
+        </div>
       </div>
     </div>
   );
