@@ -4,13 +4,15 @@ td {
   width: 10vw;
   text-align: center;
   word-wrap: break-word;
-  padding: 12px;
+  /* word-break: break-all; */
+  padding: 2px;
 }
 
 @media only screen and (max-width: 1000px) {
   td{
-    height: 15vw;
-    width: 15vw;
+    height: 18vw;
+    width: 19vw;
+    font-size: 12px;
   }
 }
 
