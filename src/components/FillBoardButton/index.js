@@ -8,7 +8,7 @@ function FillBoardButton({
 }) {
   return (
     <div>
-      <Button className='fill-button' variant="danger" onClick={fillBoard}>Fill Board</Button>
+      <Button className='fill-button' variant="warning" onClick={fillBoard}>Fill Board</Button>
     </div>
   )
 }

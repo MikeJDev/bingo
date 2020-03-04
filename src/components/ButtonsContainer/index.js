@@ -4,6 +4,7 @@ import RandomButton from '../RandomButton/index'
 import { randomizeArray, fillBoard, clearBoard } from '../../redux/actions/index'
 import FillBoardButton from "../FillBoardButton/index";
 import ClearBoardButton from '../ClearBoardButton/index'
+import ExportPDFButton from '../ExportPDFButton/index'
 import '../ButtonsContainer/index.css'
 
 
@@ -23,14 +24,16 @@ handleRandom = () => {
         ></FillBoardButton>
         <ClearBoardButton
         clearBoard={this.props.clearBoard}
+        items={this.props.items}
         ></ClearBoardButton>
+        <ExportPDFButton></ExportPDFButton>
       </div>
     )
   }
 }
 
 const mapStateToProps = (state) => ({
-  
+  items: state.items.length
 })
 
 const mapDispatchToProps = {
