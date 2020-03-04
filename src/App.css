@@ -1,20 +1,11 @@
 .App {
-  margin-top: px;
   display: flex;
   margin-top: 30px;
-  /* flex-direction: column; */
-  /* align-items: center; */
-  /* justify-content: center; */
   margin-bottom: 100px;
 }
 
 .textInput {
   margin: 50px;
-}
-
-.counter {
-  display: flex;
-  justify-content: flex-start;
 }
 
 .board {
@@ -25,5 +16,7 @@
 @media only screen and (max-width: 1000px) {
   .App {
     flex-direction: column;
+    align-items: center;
+
   }
 }

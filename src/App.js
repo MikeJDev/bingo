@@ -8,12 +8,12 @@ import RandomButtonContainer from './components/RandomButtonContainer/index'
 function App() {
   return (
     <div className="App">
+      <div className='board'>
+        <Board></Board>
+      </div>
       <div className='textInput'>
         <TextInput></TextInput>
         <RandomButtonContainer></RandomButtonContainer>
-      </div>
-      <div className='board'>
-        <Board></Board>
       </div>
     </div>
   );

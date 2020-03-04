@@ -7,3 +7,10 @@ td {
   padding: 12px;
 }
 
+@media only screen and (max-width: 1000px) {
+  td{
+    height: 15vw;
+    width: 15vw;
+  }
+}
+
