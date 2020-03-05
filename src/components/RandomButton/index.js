@@ -22,23 +22,23 @@ function RandomButton({
   }
   return (
     <div>
-      <Button className='build-button' variant="primary" onClick={handleOpen}>Randomize</Button>
+      <Button className='fill-button' variant="primary" onClick={handleOpen}>Randomize</Button>
 
       <div>
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Are you sure?</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Clicking YES will randomize the board and could remove a winning line!</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            No
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Are you sure?</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>Clicking YES will randomize the board and could remove a winning line!</Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              No
           </Button>
-          <Button variant="primary" onClick={handleYesClose}>
-            Yes
+            <Button variant="primary" onClick={handleYesClose}>
+              Yes
           </Button>
-        </Modal.Footer>
-      </Modal>
+          </Modal.Footer>
+        </Modal>
       </div>
     </div>
   )
