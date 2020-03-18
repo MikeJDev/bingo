@@ -1,11 +1,16 @@
+.AppContainer {
+  /* background-color: #2896fb; */
+  
+}
+.name {
+  display: flex;
+  justify-content: center;
+}
+
 .App {
   display: flex;
   margin-top: 10px;
   justify-content: center;
-}
-
-.textInput {
-  margin: 10px;
 }
 
 .board {
@@ -13,6 +18,10 @@
   flex-direction: column;
   align-self: center;
   margin: 5px;
+}
+
+.textInput {
+  margin: 10px;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -23,8 +32,4 @@
   .board {
     margin: 0px;
   }
-}
-
-.AppContainer {
-  /* background-color: #2896fb; */
 }

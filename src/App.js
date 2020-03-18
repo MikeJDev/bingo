@@ -8,8 +8,10 @@ import BoardName from './components/BoardName/index'
 function App() {
   return (
     <div className='AppContainer'>
-      <div className="App">
+      <div className='name'>
         <BoardName></BoardName>
+      </div>
+      <div className="App">
         <div className='board'>
           <Board></Board>
           <ButtonsContainer></ButtonsContainer>
