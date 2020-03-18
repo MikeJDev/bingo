@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal'
+import '../ClearBoardButton/index.css'
 
 
 function ClearBoardButton({
@@ -21,7 +22,7 @@ function ClearBoardButton({
   }
   return (
     <div>
-      <Button className='fill-button' variant="danger" onClick={handleOpen}>Clear All</Button>
+      <Button className='clear-button' variant="danger" onClick={handleOpen}>Clear All</Button>
       <div>
 
         <Modal centered show={show} onHide={handleClose}>

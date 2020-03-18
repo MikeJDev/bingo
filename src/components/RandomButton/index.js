@@ -22,7 +22,7 @@ function RandomButton({
   }
   return (
     <div>
-      <Button className='fill-button' variant="primary" onClick={handleOpen}>Randomize</Button>
+      <Button className='random-button' variant="primary" onClick={handleOpen}>Randomize</Button>
 
       <div>
         <Modal centered show={show} onHide={handleClose}>

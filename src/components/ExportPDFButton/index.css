@@ -1,0 +1,14 @@
+.export-button {
+  margin-top: 10px;
+  margin-left: 5px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px grey;
+  /* background-color: #B10DC9; */
+  /* border-color: #B10DC9; */
+}
+
+@media only screen and (max-width: 1000px) {
+  .export-button {
+    font-size: 12px;
+  }
+}
