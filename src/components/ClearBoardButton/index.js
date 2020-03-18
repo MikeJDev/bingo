@@ -24,21 +24,21 @@ function ClearBoardButton({
       <Button className='fill-button' variant="danger" onClick={handleOpen}>Clear All</Button>
       <div>
 
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Are you sure?</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Clicking YES will remove all items from the board</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            No
+        <Modal centered show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Are you sure?</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>Clicking YES will remove all items from the board</Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              No
           </Button>
-          <Button variant="primary" onClick={handleYesClose}>
-            Yes
+            <Button variant="primary" onClick={handleYesClose}>
+              Yes
           </Button>
-        </Modal.Footer>
-      </Modal>
-    </div>
+          </Modal.Footer>
+        </Modal>
+      </div>
     </div>
   )
 }

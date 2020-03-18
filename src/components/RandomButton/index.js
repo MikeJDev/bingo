@@ -25,7 +25,7 @@ function RandomButton({
       <Button className='fill-button' variant="primary" onClick={handleOpen}>Randomize</Button>
 
       <div>
-        <Modal show={show} onHide={handleClose}>
+        <Modal centered show={show} onHide={handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>Are you sure?</Modal.Title>
           </Modal.Header>
